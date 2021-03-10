@@ -1,0 +1,24 @@
+#puerto tomcat para servidor
+server:
+  port: 7000
+  
+#spring configuration
+spring:
+  application:
+    name: zuul-service
+  jpa:
+    show-sql: true
+
+#zuul properties configuration
+
+zuul:
+  routes:
+    serv-greet:
+     path: /greeting-service/**
+     service-id: greeting-microservice
+
+#eureka configuration
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka

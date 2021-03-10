@@ -1,0 +1,23 @@
+spring:
+  data:
+    mongodb:
+      database: usuarios-colegio
+      port: 27017
+      host: localhost
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop 
+  application:
+    name: roles-ms
+    
+    
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+server:
+  port: 4001
+  error:
+    whitelabel:
+      enabled: true
